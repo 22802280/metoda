@@ -189,7 +189,7 @@ nav{
     justify-content: center;
     align-items: center;
     box-shadow: 5px 5px 0 #000000;
-    margin-top: 30px;
+    margin-top: 20px;
     transition-duration: 0.3s;
     z-index: 3;
 }
@@ -217,7 +217,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 20px;
 }
 
 .about-content{
@@ -250,6 +250,7 @@ nav{
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    position: relative;
 }
 
 .about-card p{
@@ -268,26 +269,26 @@ nav{
 .skills-block{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .skills-card{
     background-image: url(img/form3.png);
     background-repeat: no-repeat;
-    background-size:cover;
-    width: 638px;
-    height: 403px;
+    background-size: cover;
+    height: 401px;
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
+    align-items: center;
+    margin-top: 100px;
 }
 
 .skills-card p{
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 80px;
     margin-bottom: 30px;
+    text-align: center;
+    max-width: 500px;
     font-family: 'Comfortaa';
 }
 
@@ -345,6 +346,11 @@ footer{
         display: none;
     }
 
+    .logo{
+        font-size: 40px;
+        padding-left: 20px;
+    }
+
     .main-content{
         max-width: 320px;
     }
@@ -368,15 +374,24 @@ footer{
 
     .about-block{
         flex-direction: column;
+        margin-top: 20px;
     }
 
     .about-card{
         order: -1;
+        background-size: contain;
+        padding-top: 20px;
+        width: 326px;
+        height: 296px;
+    }
+
+    .about-card img{
+        width: 85%;
     }
 
     .about-content{
         width: 75%;
-        height: 270px;
+        height: 250px;
     }
 
     .about-title{
@@ -390,7 +405,7 @@ footer{
     }
 
     .skills-card p{
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 15%;
         margin-bottom: 20px;
     }
@@ -404,5 +419,22 @@ footer{
 
     .footer-info{
         text-align: center;
+    }
+
+    .skills-section{
+        min-height: 60vh;
+    }
+
+    .button{
+        width: 150px;
+        height: 40px;
+    }
+    
+    .button a {
+        font-size: 15px;
+    }
+    
+    .about-content{
+        margin-bottom: 20px;
     }
 }
