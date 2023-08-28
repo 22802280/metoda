@@ -20,6 +20,7 @@ nav{
     color: #BBFF2C;
     font-size: 80px;
     padding-left: 50px;
+    align-self: flex-start;
 }
 
 .fixed-menu{
@@ -47,26 +48,52 @@ nav{
     align-items: center;
     margin-right: 20px;
     transition-duration: 0.3s;
-}
-
-.nav-link:hover{
-    background-color: #BBFF2C;
-}
-
-.nav-link a{
     text-decoration: none;
     color: #000;
     font-size: 20px;
     font-family: 'Comfortaa';
 }
 
+.active, .nav-link:hover{
+    background-color: #792AFF;
+    color: #FFF;
+}
+
 .mobile-button{
+    display: none;
+    align-self: flex-start;
+    padding-top: 10px;
+}
+
+.hide{
     display: none;
 }
 
 .mobile-menu{
-
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #200153;
+    min-height: 100vh;
 }
+
+.mobile-nav{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-links .nav-link{
+    margin-bottom: 30px;
+    width: 210px;
+    height: 50px;
+}
+
+
+
 
 .main-section, .about-section, .skills-section, .works-section{
     background-position: center;
@@ -438,3 +465,4 @@ footer{
         margin-bottom: 20px;
     }
 }
+
