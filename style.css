@@ -6,6 +6,8 @@
     scroll-behavior: smooth;
 }
 
+/* Меню */
+
 nav{
     position: fixed;
     top: 0;
@@ -20,8 +22,6 @@ nav{
     color: #BBFF2C;
     font-size: 80px;
     padding-left: 50px;
-    align-self: flex-start;
-
 }
 
 .fixed-menu{
@@ -35,7 +35,7 @@ nav{
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    margin-right: 150px;
+    padding-right: 150px;
 }
 
 .nav-link{
@@ -44,15 +44,15 @@ nav{
     border-radius: 12px;
     border: 2px solid #000;
     background-color: #FFF;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Comfortaa';
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
     transition-duration: 0.3s;
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-family: 'Comfortaa';
 }
 
 .active, .nav-link:hover{
@@ -61,7 +61,6 @@ nav{
 
 .mobile-button{
     display: none;
-    align-self: flex-start;
     padding-top: 10px;
 }
 
@@ -92,8 +91,13 @@ nav{
     height: 50px;
 }
 
-.main-section, .about-section, 
-.skills-section, .works-section, .comments-section{
+.mobile-button, .logo{
+    align-self: flex-start;
+}
+
+/* Секции */
+
+section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,37 +105,38 @@ nav{
     position: relative;
 }
 
-.main-section{
-   background-color: #200153;
+#main{
    background-image: url(img/bgMAIN.png);
 }
 
-.about-section{
-    background-color: #0090FF;
+#about{
     background-image: url(img/bgABOUT.png);
 }
 
-.skills-section{
-    background-color:#792AFF;
+#skills{
     background-image: url(img/bgSKILLS.png);
 }
 
-.works-section{
-    background-color: #200153;
+#works{
     background-image: url(img/bgWORKS.png);
 }
 
-.comments-section{
-    background-color: #792AFF;
+#comments{
     background-image: url(img/bgCOMMENTS.png);
 }
 
 
-.main-block{
+.main-block, .about-block, .skills-block, .works-block, .comments-block{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 70vh;
+}
+
+/* Главная */
+
+.main-block{
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -144,43 +149,6 @@ nav{
     position: absolute;
     right: 20px;
     z-index: 1;
-}
-
-.moving-planet, .moving-planet2, .moving-cloud{
-    animation-name: planet_move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.moving-planet{
-    background: url(img/moving-planet.png);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 230px;
-    transform: rotate(-15deg);
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
-
-.moving-cloud{
-    background: url(img/cloud.png);
-    background-repeat: no-repeat;
-    width: 180px;
-    height: 162px;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
-.moving-planet2{
-    background: url(img/moving-planet2.png);
-    background-repeat: no-repeat;
-    width: 208px;
-    height: 200px;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
 }
 
 @keyframes planet_move {
@@ -244,12 +212,47 @@ nav{
     text-shadow: 5px 5px 0 #000000;
 }
 
-.about-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 0;
+
+/* Анимации */
+
+.moving-planet, .moving-planet2, .moving-cloud{
+    animation-name: planet_move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
+.moving-planet{
+    background: url(img/moving-planet.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 230px;
+    transform: rotate(-15deg);
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.moving-cloud{
+    background: url(img/cloud.png);
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 162px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.moving-planet2{
+    background: url(img/moving-planet2.png);
+    background-repeat: no-repeat;
+    width: 208px;
+    height: 200px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+
+/* Обо мне */
 
 .about-content{
     width: 35%;
@@ -297,10 +300,7 @@ nav{
     padding-bottom: 20px;
 }
 
-.skills-block{
-    display: flex;
-    justify-content: center;
-}
+/* Навыки */
 
 .skills-card{
     background-image: url(img/form3.png);
@@ -325,11 +325,10 @@ nav{
     font-family: 'Comfortaa';
 }
 
+/* Работы */
+
 .works-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+   min-height: 70vh;
 }
 
 .works-block img{
@@ -338,12 +337,12 @@ nav{
     box-shadow: 7px 7px 0 #000000;
 }
 
+/* Отзывы */
+
 .comments-block{
-    display: flex;
     justify-content: space-evenly;
     max-width: 1150px;
-    margin: 0 auto;
-    padding-top: 50px;
+    margin: auto;
 }
 
 .comment-card{
@@ -389,6 +388,8 @@ nav{
     max-width: 250px;
 }
 
+/* Подвал */
+
 footer{
     background-color: #200153;
     height: 110px;
@@ -414,7 +415,7 @@ footer{
     margin-right: 15px;
 }
 
-
+/* Мобильная адаптация */
 
 @media (max-width: 1000px) {
     .mobile-button {
@@ -556,5 +557,6 @@ footer{
         font-size: 15px;
         max-width: 290px;
     }
+
 }
 
