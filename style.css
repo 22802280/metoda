@@ -453,6 +453,11 @@ footer{
         min-height: 60vh;
     }
 
+    .skills-card .button{
+        position: absolute;
+        bottom: 100px;
+    }
+
     .button{
         width: 150px;
         height: 40px;
